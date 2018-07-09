@@ -33,10 +33,10 @@ export class Position {
   applyMovement(movement: Movement, limits: ICoordinates, blockedCoordinates: ICoordinates[]): Position {
       switch(movement.get()){
         case TURN_LEFT:
-          return this.turnLeft().validate(limits, []);
+          return this.turnLeft();
           break;
         case TURN_RIGHT:
-          return this.turnRight().validate(limits, []);
+          return this.turnRight();
           break;
         case GO_STRAIGHT:
           return this.goStraight().validate(limits, blockedCoordinates);
